@@ -16,7 +16,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb://localhost:27017/RevBudget')
+mongoose.connect(keys.mongoURI);
 require('./models/user');
 require('./services/passport');
 
